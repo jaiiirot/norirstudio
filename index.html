@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -24,5 +24,68 @@
         [<span></span>]
       </pre>
       <script src="./index.js" type="module"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="" id="form-category">
+        <input type="text" name="category" id="input-category">
+        <button type="submit" id="add-category">agregar</button>
+        <div id="alert-categoria" style="background: red; color: white; display: none">
+          <h3>No ingresaste una categoria</h3>
+        </div>
+    </form>
+      
+    <section>
+        <h1>Lista de categorias</h1>
+        <ul id="list-category">
+        </ul>
+    </section>
+      
+    <pre id="copy-category">
+        [<span></span>]
+    </pre>
+    <button id="send-whatsapp">Enviar por WhatsApp</button>
+    <script>
+        const form_data = document.getElementById("form-category");
+        let list_categoria = document.getElementById("list-category");
+        const alert_category = document.getElementById("alert-categoria");
+        const copy_category = document.getElementById("copy-category").children[0];
+        const send_whatsapp_button = document.getElementById("send-whatsapp");
+
+        form_data.addEventListener("submit", (e) => {
+            e.preventDefault();
+            let cat = document.getElementById("input-category");
+            if (!!cat.value) {
+                alert_category.style.display = "none";
+                console.log(cat.value, cat.name);
+                copy_category.innerHTML += `"${cat.value}",`;
+                list_categoria.innerHTML += `<li>${cat.value}</li>`;
+
+                console.log(
+                    JSON.stringify({
+                        category: cat.value,
+                    })
+                );
+
+                cat.value = "";
+            } else {
+                alert_category.style.display = "block";
+            }
+        });
+
+        send_whatsapp_button.addEventListener("click", () => {
+            const code = document.getElementById("copy-category").textContent;
+            const phoneNumber = "+5491141430021"; // Número de teléfono específico
+            const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(code)}`;
+            window.open(whatsappLink, "_blank");
+        });
+    </script>
 </body>
 </html>
