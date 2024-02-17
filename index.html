@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="" id="form-category">
+        <input type="text" name="category" id="input-category">
+        <button type="submit" id="add-category">agregar</button>
+        <div id="alert-categoria" style="background: red; color: white; display: none">
+          <h3>No ingresaste una categoria</h3>
+        </div>
+      </form>
+      
+      <section>
+        <h1>Lista de categorias</h1>
+        <ul id="list-category" >
+        </ul>
+      </section>
+      
+      <pre id="copy-category">
+        [<span></span>]
+      </pre>
+      <script src="./index.js" type="module"></script>
+</body>
+</html>
