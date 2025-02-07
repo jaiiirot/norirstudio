@@ -1,5 +1,5 @@
 {
-  "name": "cosostudio",
+  "name": "kausstudio",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,9 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.0.8",
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.2.1",
-    "astro": "^5.2.5"
+    "@tailwindcss/vite": "^4.0.4",
+    "astro": "^5.2.5",
+    "tailwindcss": "^4.0.4"
   }
 }
