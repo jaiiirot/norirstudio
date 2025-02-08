@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 ---
+
 <!doctype html>
 <html lang="es">
   <head>
@@ -10,8 +11,95 @@ import Footer from "@components/Footer.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <!-- <link rel="stylesheet" href={style} /> -->
-    <title>Kaus Studio </title>
+    <!-- Meta Descripción -->
+    <meta
+      name="description"
+      content="KAUS STUDIO: Expertos en soluciones personalizadas, renders de alta calidad y diseño innovador. Transformamos tus ideas en proyectos exitosos con tecnología y creatividad."
+    />
+
+    <!-- Palabras clave (Keywords) -->
+    <meta
+      name="keywords"
+      content="KAUS STUDIO, renders, diseño innovador, soluciones personalizadas, desarrollo web, diseño gráfico, tecnología, creatividad, proyectos exitosos"
+    />
+
+    <!-- Meta Author -->
+    <meta name="author" content="KAUS STUDIO" />
+
+    <!-- Open Graph (para redes sociales) -->
+    <meta
+      property="og:title"
+      content="KAUS STUDIO | Soluciones Innovadoras, Renders y Diseño de Alto Impacto"
+    />
+    <meta
+      property="og:description"
+      content="KAUS STUDIO: Expertos en soluciones personalizadas, renders de alta calidad y diseño innovador. Transformamos tus ideas en proyectos exitosos con tecnología y creatividad."
+    />
+    <meta
+      property="og:image"
+      content="https://www.kausstudio.vercel.app/kausstudio.png"
+    />
+    <meta property="og:url" content="https://www.kausstudio.vercel.app" />
+
+    <!-- Twitter Card (para Twitter) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="KAUS STUDIO | Soluciones Innovadoras, Renders y Diseño de Alto Impacto"
+    />
+    <meta
+      name="twitter:description"
+      content="KAUS STUDIO: Expertos en soluciones personalizadas, renders de alta calidad y diseño innovador. Transformamos tus ideas en proyectos exitosos con tecnología y creatividad."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.kausstudio.vercel.app/kausstudio.png"
+    />
+
+    <!-- Canonical URL (para evitar contenido duplicado) -->
+    <link rel="canonical" href="https://www.kausstudio.vercel.app" />
+
+    <!-- Meta Robots (indexación y seguimiento) -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Meta Viewport (para diseño responsive) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Meta Charset (codificación de caracteres) -->
+    <meta charset="UTF-8" />
+
+    <!-- Meta Language (idioma principal del sitio) -->
+    <meta http-equiv="Content-Language" content="es" />
+
+    <!-- Schema Markup (para SEO avanzado)
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "KAUS STUDIO",
+        "image": "https://www.kausstudio.com/logo.jpg",
+        "description": "Expertos en soluciones personalizadas, renders de alta calidad y diseño innovador. Transformamos tus ideas en proyectos exitosos con tecnología y creatividad.",
+        "url": "https://www.kausstudio.com",
+        "telephone": "+52-123-456-7890",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle Ejemplo 123",
+          "addressLocality": "Ciudad de México",
+          "postalCode": "12345",
+          "addressCountry": "México"
+        },
+        "sameAs": [
+          "https://www.facebook.com/kausstudio",
+          "https://www.instagram.com/kausstudio",
+          "https://www.linkedin.com/company/kausstudio"
+        ]
+      }
+    </script> -->
+    <!-- <title>Kaus Studio</title> -->
+    <!-- Título optimizado para SEO -->
+    <title>
+      KAUS STUDIO | Soluciones Innovadoras, Renders y Diseño de Alto Impacto
+    </title>
   </head>
   <body class="relative">
     <Header />
