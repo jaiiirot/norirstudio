@@ -3,21 +3,30 @@
 
 @font-face {
   font-family: "Cousine";
-  src: url("../fonts/Cousine/Cousine-Regular.woff2") format("woff");
+  src: url("fonts/Cousine-Regular.woff2") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Cousine";
-  src: url("../fonts/Cousine/Cousine-Bold.woff2") format("woff");
+  src: url("fonts/Cousine-Bold.woff2") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Condensed";
-  src: url("../fonts/ExtraCondensed/ExtraCondensed.woff2") format("woff");
+  src: url("fonts/ExtraCondensed.woff2") format("woff");
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("fonts/Manrope.woff2") format("woff");
+}
+
+html,body{
+  cursor: url("/cursor.png"), auto;
 }
 
 * {
@@ -27,10 +36,21 @@
   font-family: "Cousine", serif;
 }
 
-@theme{
+* .title {
+  font-family: "Condensed";
+  font-weight: 900;
+  margin-block: 0;
+  line-height: 16rem;
+}
 
---color-primary: #212125;
---color-secondary: #4f4f4f;
---color-tertiary: #6d6d6d;
---color-quaternary: #ffffff;
+* .parrafe {
+  font-family: "Manrope";
+  
+}
+
+@theme {
+  --color-primary: #212125;
+  --color-secondary: #4f4f4f;
+  --color-tertiary: #6d6d6d;
+  --color-quaternary: #ffffff;
 }

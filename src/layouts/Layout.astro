@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Header from "../components/Header.astro";
 ---
 <!doctype html>
 <html lang="en">
@@ -12,24 +13,8 @@ import "../styles/global.css";
     <!-- <link rel="stylesheet" href={style} /> -->
     <title>Astro Basics</title>
   </head>
-  <body>
+  <body class="relative">
+    <Header />
     <slot />
   </body>
 </html>
-
-<!-- <style is:global>
-  @import "tailwindcss";
-  /* @import url("https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@200..800&family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap"); */
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Cousine", serif;
-  }
-
-/* 
-  @theme{
-	--color-primary: #d1d1d1;
-  } */
-</style> -->
