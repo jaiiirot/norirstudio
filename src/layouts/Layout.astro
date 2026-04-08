@@ -1,109 +1,48 @@
 ---
+// Archivo: src/layouts/Layout.astro
+import { ViewTransitions } from "astro:transitions";
 import "../styles/global.css";
-import Header from "@components/ui/Header.astro";
+import Header from "@components/ui/Header.astro"; // Usando tus alias del tsconfig
 import Footer from "@components/ui/Footer.astro";
+
+// Permitimos que las páginas le pasen su propio título y descripción
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+// Si una página no le pasa título, usa este por defecto
+const { 
+  title = "NORIR STUDIO | Código Estructural & Visualización 3D",
+  description = "NORIR STUDIO: Expertos en ingeniería de software y visualización arquitectónica fotorrealista. Sinergia entre desarrollo full-stack (UTN) y arquitectura (UBA)."
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <!-- Meta Descripción -->
-    <meta
-      name="description"
-      content="NORIR STUDIO: Expertos en soluciones personalizadas, renders de alta calidad y diseño innovador. Transformamos tus ideas en proyectos exitosos con tecnología y creatividad."
-    />
-
-    <!-- Palabras clave (Keywords) -->
-    <meta
-      name="keywords"
-      content="NORIR STUDIO, renders, diseño innovador, soluciones personalizadas, desarrollo web, diseño gráfico, tecnología, creatividad, proyectos exitosos"
-    />
-
-    <!-- Meta Author -->
+    
+    <title>{title}</title>
+    <meta name="description" content={description} />
     <meta name="author" content="NORIR STUDIO" />
+    <meta name="keywords" content="NORIR STUDIO, renders, desarrollo web, arquitectura, UTN, UBA, full-stack, CGI" />
 
-    <!-- Open Graph (para redes sociales) -->
-    <meta
-      property="og:title"
-      content="NORIR STUDIO | Soluciones Innovadoras, Renders y Diseño de Alto Impacto"
-    />
-    <meta
-      property="og:description"
-      content="NORIR STUDIO: Expertos en soluciones personalizadas, renders de alta calidad y diseño innovador. Transformamos tus ideas en proyectos exitosos con tecnología y creatividad."
-    />
-    <meta
-      property="og:image"
-      content="https://www.norirstudio.vercel.app/norirstudion.png"
-    />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://www.norirstudio.vercel.app/norirstudion.png" />
     <meta property="og:url" content="https://www.norirstudio.vercel.app" />
 
-    <!-- Twitter Card (para Twitter) -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="NORIR STUDIO | Soluciones Innovadoras, Renders y Diseño de Alto Impacto"
-    />
-    <meta
-      name="twitter:description"
-      content="NORIR STUDIO: Expertos en soluciones personalizadas, renders de alta calidad y diseño innovador. Transformamos tus ideas en proyectos exitosos con tecnología y creatividad."
-    />
-    <meta
-      name="twitter:image"
-      content="https://www.norirstudio.vercel.app/norirstudion.png"
-    />
-
-    <!-- Canonical URL (para evitar contenido duplicado) -->
-    <link rel="canonical" href="https://www.norirstudio.vercel.app" />
-
-    <!-- Meta Robots (indexación y seguimiento) -->
-    <meta name="robots" content="index, follow" />
-
-    <!-- Meta Viewport (para diseño responsive) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Meta Charset (codificación de caracteres) -->
-    <meta charset="UTF-8" />
-
-    <!-- Meta Language (idioma principal del sitio) -->
-    <meta http-equiv="Content-Language" content="es" />
-
-    <!-- Schema Markup (para SEO avanzado)
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "NORIR STUDIO",
-        "image": "https://www.norirstudio.com/logo.jpg",
-        "description": "Expertos en soluciones personalizadas, renders de alta calidad y diseño innovador. Transformamos tus ideas en proyectos exitosos con tecnología y creatividad.",
-        "url": "https://www.norirstudio.com",
-        "telephone": "+52-123-456-7890",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Calle Ejemplo 123",
-          "addressLocality": "Ciudad de México",
-          "postalCode": "12345",
-          "addressCountry": "México"
-        },
-        "sameAs": [
-          "https://www.facebook.com/norirstudio",
-          "https://www.instagram.com/norirstudio",
-          "https://www.linkedin.com/company/norirstudio"
-        ]
-      }
-    </script> -->
-    <!-- <title>norir Studio</title> -->
-    <!-- Título optimizado para SEO -->
-    <title>
-      NORIR STUDIO | Soluciones Innovadoras, Renders y Diseño de Alto Impacto
-    </title>
+    <ViewTransitions />
   </head>
-  <body class="relative">
+  <body class="relative bg-primary overflow-x-hidden">
     <Header />
+    
     <slot />
+    
     <Footer />
   </body>
 </html>

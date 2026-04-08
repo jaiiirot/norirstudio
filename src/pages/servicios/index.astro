@@ -1,0 +1,98 @@
+---
+// Archivo: src/pages/servicios/index.astro
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Servicios | NORIR STUDIO" description="Desarrollo Web Full-Stack y Visualización Arquitectónica 3D. Soluciones integrales.">
+  <main class="bg-[url(/ruido.png)] bg-no-repeat bg-cover bg-fixed min-h-screen pt-32 pb-24 text-quaternary relative z-10">
+    
+    <div class="w-11/12 mx-auto">
+      
+      <div class="mb-24 mt-12">
+        <div class="flex justify-between py-4 border-t border-gray-600 mb-8">
+          <p class="text-quaternary uppercase tracking-widest text-sm">capacidades *</p>
+          <p><span class="text-quaternary">03</span> // 03</p>
+        </div>
+        
+        <h1 
+          class="title text-[4rem] md:text-[8rem] lg:text-[11rem] leading-none uppercase"
+          style="text-shadow: 1px 1px 40px rgba(255, 255, 255, 0.4);"
+        >
+          SERVICIOS
+        </h1>
+        <p class="parrafe text-xl md:text-2xl text-tertiary mt-8 max-w-3xl leading-relaxed border-l-4 border-white pl-6">
+          Nuestra metodología es binaria: o desarrollamos infraestructuras lógicas que resuelven problemas reales, o renderizamos espacios con precisión fotorrealista. Sin grises.
+        </p>
+      </div>
+
+      <section class="mb-32">
+        <h2 class="title text-[3rem] md:text-[5rem] mb-12 border-b border-gray-800 pb-4">/01 INGENIERÍA DE SOFTWARE</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <article class="border border-gray-800 p-8 hover:bg-white hover:text-black transition-all group">
+            <span class="parrafe text-xs uppercase tracking-widest border border-current px-2 py-1 mb-8 inline-block">Frontend & Backend</span>
+            <h3 class="title text-3xl mb-4 uppercase">Desarrollo <br> Web a Medida</h3>
+            <p class="parrafe text-tertiary group-hover:text-gray-800 leading-relaxed">
+              Creación de Landing Pages de alta conversión, Portfolios y sistemas E-commerce. Uso de Astro, React y Tailwind para interfaces rápidas, conectadas a bases de datos (PostgreSQL/Node) seguras y escalables.
+            </p>
+          </article>
+          
+          <article class="border border-gray-800 p-8 hover:bg-white hover:text-black transition-all group">
+            <span class="parrafe text-xs uppercase tracking-widest border border-current px-2 py-1 mb-8 inline-block">Plataformas Web</span>
+            <h3 class="title text-3xl mb-4 uppercase">Sistemas de <br> Gestión (CRUD)</h3>
+            <p class="parrafe text-tertiary group-hover:text-gray-800 leading-relaxed">
+              Automatización de procesos administrativos. Como hicimos con la Plataforma ITEC BA, desarrollamos software interno para gestionar usuarios, inscripciones, stocks y bases de datos lógicas.
+            </p>
+          </article>
+
+          <article class="border border-gray-800 p-8 hover:bg-white hover:text-black transition-all group">
+            <span class="parrafe text-xs uppercase tracking-widest border border-current px-2 py-1 mb-8 inline-block">Hardware</span>
+            <h3 class="title text-3xl mb-4 uppercase">Asesoramiento <br> Técnico</h3>
+            <p class="parrafe text-tertiary group-hover:text-gray-800 leading-relaxed">
+              Consultoría sobre armado de equipos (Workstations/Gaming), optimización de servidores y rendimiento de hardware (Procesadores, GPUs). Sabemos dónde corre el código.
+            </p>
+          </article>
+        </div>
+      </section>
+
+
+      <section class="mb-24">
+        <h2 class="title text-[3rem] md:text-[5rem] mb-12 border-b border-gray-800 pb-4 text-right">ARQUITECTURA VISUAL /02</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <article class="border border-gray-800 p-8 hover:bg-white hover:text-black transition-all group">
+            <span class="parrafe text-xs uppercase tracking-widest border border-current px-2 py-1 mb-8 inline-block">Motores de Render</span>
+            <h3 class="title text-3xl mb-4 uppercase">CGI & Renders <br> Fotorrealistas</h3>
+            <p class="parrafe text-tertiary group-hover:text-gray-800 leading-relaxed">
+              Materialización visual de proyectos en pozo. Dominio de iluminación global, texturizado avanzado y encuadre fotográfico utilizando V-Ray/Corona para exteriores e interiores de alto nivel comercial.
+            </p>
+          </article>
+          
+          <article class="border border-gray-800 p-8 hover:bg-white hover:text-black transition-all group">
+            <span class="parrafe text-xs uppercase tracking-widest border border-current px-2 py-1 mb-8 inline-block">Modelado 3D</span>
+            <h3 class="title text-3xl mb-4 uppercase">Traducción <br> CAD a 3D</h3>
+            <p class="parrafe text-tertiary group-hover:text-gray-800 leading-relaxed">
+              Levantamiento volumétrico desde planos 2D. Modelado preciso y a escala del entorno arquitectónico y mobiliario utilizando software de vanguardia arquitectónica (SketchUp, Rhino).
+            </p>
+          </article>
+
+          <article class="border border-gray-800 p-8 hover:bg-white hover:text-black transition-all group">
+            <span class="parrafe text-xs uppercase tracking-widest border border-current px-2 py-1 mb-8 inline-block">Adobe Suite</span>
+            <h3 class="title text-3xl mb-4 uppercase">Postproducción <br> y Presentación</h3>
+            <p class="parrafe text-tertiary group-hover:text-gray-800 leading-relaxed">
+              Edición fotográfica avanzada en Photoshop. Fotomontajes, ambientación, corrección de color y diagramación de paneles arquitectónicos o recorridos inmersivos para la presentación final al cliente.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <div class="mt-32 pt-16 border-t border-gray-600 flex flex-col items-center justify-center text-center">
+        <p class="parrafe text-xl text-tertiary uppercase tracking-[0.3em] mb-8">¿Necesitás uno de estos servicios?</p>
+        <a href="mailto:norirstudio@gmail.com" class="title text-[4rem] md:text-[8rem] text-white hover:text-gray-400 transition-colors uppercase leading-none border-b-4 border-transparent hover:border-white pb-4">
+          INICIAR PROYECTO
+        </a>
+      </div>
+
+    </div>
+  </main>
+</Layout>

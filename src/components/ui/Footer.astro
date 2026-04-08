@@ -1,0 +1,37 @@
+---
+// Archivo: src/components/Footer.astro
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="w-full bg-black border-t border-gray-800 text-quaternary relative overflow-hidden pt-16 pb-8 z-50">
+  <div class="w-11/12 mx-auto">
+    
+    <div class="flex flex-col items-center justify-center text-center mb-16 border-b border-gray-800 pb-16">
+      <h2 
+        class="title text-[5rem] md:text-[10rem] lg:text-[15rem] leading-none tracking-tighter hover:text-transparent transition-all duration-500"
+        style="text-shadow: 1px 1px 40px rgba(255, 255, 255, 0.1); -webkit-text-stroke: 2px #ffffff;"
+      >
+        NORIR
+      </h2>
+      <p class="parrafe text-tertiary uppercase tracking-[0.5em] text-sm md:text-base -mt-4 bg-black px-4">
+        Studio // Code & Render
+      </p>
+    </div>
+
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+      
+      <nav class="flex gap-6">
+        <a href="/" class="parrafe text-sm text-tertiary hover:text-white uppercase tracking-widest transition-colors">Inicio</a>
+        <a href="/nosotros" class="parrafe text-sm text-tertiary hover:text-white uppercase tracking-widest transition-colors">Nosotros</a>
+        <a href="/proyectos" class="parrafe text-sm text-tertiary hover:text-white uppercase tracking-widest transition-colors">Proyectos</a>
+      </nav>
+
+      <div>
+        <p class="parrafe text-sm text-tertiary uppercase tracking-widest">
+          © {currentYear} NORIR STUDIO. Todos los derechos reservados.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</footer>

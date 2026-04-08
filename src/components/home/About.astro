@@ -1,44 +1,47 @@
 ---
+// Archivo: src/components/home/About.astro
 ---
-<section class="flex bg-[url(/ruido.png)] bg-no-repeat bg-cover justify-center pb-24">
+<section class="flex bg-[url(/ruido.png)] bg-no-repeat bg-cover justify-center pb-24" id="nosotros">
   <div class="border-t border-gray-600 w-11/12 mx-auto mt-24 text-tertiary">
-    <div class="flex justify-between py-4">
-      <p class="text-quaternary">nosotros *</p>
+    
+    <div class="flex justify-between py-4 mb-12">
+      <p class="text-quaternary uppercase tracking-widest text-sm">nosotros *</p>
       <p><span class="text-quaternary">02</span> // 05</p>
     </div>
 
-    <article class="text-quaternary flex flex-col lg:flex-row gap-16 justify-between mt-8">
-      <div class="w-full lg:w-5/12">
-        <h2
-          class="title text-left text-[4rem] md:text-[6rem] lg:text-[8rem] leading-none"
-          style="text-shadow: 1px 1px 40px rgba(255, 255, 255, 0.569);"
+    <div class="flex flex-col lg:flex-row gap-16 items-center mt-8">
+      
+      <div class="w-full lg:w-1/2">
+        <h2 
+          class="title text-[4rem] md:text-[6rem] lg:text-[8rem] leading-none text-quaternary mb-8" 
+          style="text-shadow: 1px 1px 40px rgba(255, 255, 255, 0.3);"
         >
           EL DÚO
         </h2>
-        <p class="parrafe text-xl md:text-2xl leading-10 mt-8 text-tertiary">
-          NORIR STUDIO es la colisión entre el <span class="text-quaternary">código estructural</span> y la <span class="text-quaternary">visualización hiperrealista</span>. Combinamos lógica de sistemas y arquitectura visual para ejecutar proyectos que funcionan perfecto y se ven increíbles.
+        <p class="parrafe text-xl md:text-2xl leading-relaxed text-gray-300 mb-6">
+          NORIR STUDIO es el punto de colisión exacto donde la <span class="text-quaternary font-bold border-b border-gray-600">lógica de sistemas (UTN)</span> y la <span class="text-quaternary font-bold border-b border-gray-600">visualización arquitectónica (UBA)</span> convergen. 
         </p>
+        <p class="parrafe text-base text-tertiary mb-12">
+          No hacemos solo diseño, construimos infraestructuras web robustas y materializamos conceptos espaciales hiperrealistas. Una sinergia entre código escalable y estética fotorrealista.
+        </p>
+        
+        <a 
+          href="/nosotros" 
+          class="parrafe text-sm uppercase tracking-widest border border-quaternary text-quaternary px-8 py-4 hover:bg-quaternary hover:text-black transition-all duration-300 inline-block"
+        >
+          Conocer al estudio completo →
+        </a>
       </div>
 
-      <div class="w-full lg:w-7/12 flex flex-col md:flex-row gap-12">
-        <div class="border-l border-tertiary pl-6 w-full">
-          <h3 class="parrafe text-3xl text-quaternary mb-2">Jairo</h3>
-          <p class="parrafe text-tertiary text-sm tracking-widest uppercase mb-4">Ing. de Sistemas (UTN BA) // Full-Stack Dev</p>
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop" alt="Code" class="h-40 w-full object-cover grayscale-100 mb-6 rounded-br-3xl">
-          <p class="parrafe text-base leading-relaxed">
-            Especializado en la creación de aplicaciones web escalables y plataformas lógicas complejas. Transformo procesos en soluciones digitales eficientes mediante arquitecturas de software robustas.
-          </p>
-        </div>
-
-        <div class="border-l border-tertiary pl-6 w-full">
-          <h3 class="parrafe text-3xl text-quaternary mb-2">Arquitectura Visual</h3>
-          <p class="parrafe text-tertiary text-sm tracking-widest uppercase mb-4">Arquitectura (UBA) // CGI & 3D Artist</p>
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop" alt="Render" class="h-40 w-full object-cover grayscale-100 mb-6 rounded-bl-3xl">
-          <p class="parrafe text-base leading-relaxed">
-            Dominio de motores de renderizado, modelado 3D, Photoshop y suite Adobe. Llevo planos y conceptos abstractos a imágenes fotorealistas de alto impacto comercial.
-          </p>
-        </div>
+      <div class="w-full lg:w-1/2 relative h-[400px] md:h-[500px] group overflow-hidden border border-gray-800">
+        <img 
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" 
+          alt="Arquitectura y Código" 
+          class="w-full h-full object-cover grayscale-100 group-hover:scale-105 transition-transform duration-700"
+        />
+        <div class="absolute inset-0 bg-black/50 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
       </div>
-    </article>
+
+    </div>
   </div>
 </section>

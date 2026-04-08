@@ -2,12 +2,17 @@
 // Archivo: src/components/Header.astro
 ---
 
-<header class="w-full top-0 z-[100] flex justify-center items-center bg-black fixed border-b border-gray-800">
+<header
+  class="w-full top-0 z-[100] flex justify-center items-center bg-black fixed border-b border-gray-800"
+>
   <div
     class="flex justify-between w-11/12 text-gray-200 h-16 items-center relative"
   >
     <div>
-      <a href="/" class="title text-2xl tracking-widest hover:text-white transition-colors">
+      <a
+        href="/"
+        class="title text-2xl tracking-widest hover:text-white transition-colors"
+      >
         <h2>norir</h2>
       </a>
     </div>
@@ -15,7 +20,10 @@
       id="mainNav"
       class="hidden flex-col md:flex md:flex-row gap-4 absolute md:relative top-full md:top-0 left-0 md:left-auto w-full md:w-auto bg-black md:bg-transparent p-4 md:p-0 transition-all duration-300"
     >
-      <a class="parrafe text-sm hover:opacity-30 transition-all block md:inline uppercase tracking-widest" href="/">INICIO</a>
+      <a
+        class="parrafe text-sm hover:opacity-30 transition-all block md:inline uppercase tracking-widest"
+        href="/">INICIO</a
+      >
       <span class="cursor-none hidden md:inline text-tertiary">/</span>
       <a
         class="parrafe text-sm hover:opacity-30 transition-all block md:inline uppercase tracking-widest"
@@ -26,16 +34,26 @@
         class="parrafe text-sm hover:opacity-30 transition-all block md:inline uppercase tracking-widest"
         href="/proyectos">PROYECTOS</a
       >
+      <span class="cursor-none hidden md:inline text-tertiary">/</span>
+      <a
+        class="parrafe text-sm hover:opacity-30 transition-all block md:inline uppercase tracking-widest"
+        href="/servicios">SERVICIOS</a
+      >
     </nav>
     <div class="border-b border-gray-500 pl-4 md:pl-0 pb-1">
       <a href="mailto:norirstudio@gmail.com">
-        <p class="parrafe text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-all px-2 py-1">
+        <p
+          class="parrafe text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-all px-2 py-1"
+        >
           Contáctanos
         </p>
       </a>
     </div>
     <div class="md:hidden">
-      <button id="menuBtn" class="text-white hover:text-gray-400 transition-colors">
+      <button
+        id="menuBtn"
+        class="text-white hover:text-gray-400 transition-colors"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -77,15 +95,15 @@
   const mainNav = document.getElementById("mainNav");
 
   menuBtn.addEventListener("click", () => {
-    mainNav.classList.remove("hidden"); 
-    mainNav.classList.add("flex"); 
+    mainNav.classList.remove("hidden");
+    mainNav.classList.add("flex");
     menuBtn.classList.add("hidden");
     closeBtn.classList.remove("hidden");
   });
 
   closeBtn.addEventListener("click", () => {
-    mainNav.classList.add("hidden"); 
-    mainNav.classList.remove("flex"); 
+    mainNav.classList.add("hidden");
+    mainNav.classList.remove("flex");
     closeBtn.classList.add("hidden");
     menuBtn.classList.remove("hidden");
   });
