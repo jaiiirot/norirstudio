@@ -1,40 +1,32 @@
 ---
 // Archivo: src/pages/index.astro
-import Layout from "@layouts/Layout.astro";
-import Hero from "@components/home/Hero.astro";
-import About from "@components/home/About.astro";
-import Services from "@components/home/Services.astro";
-import Projects from "@components/home/Projects.astro";
-import Contact from "@components/home/Contact.astro";
-import Testimonials from "@components/home/Testimonials.astro";
-
-// 1. Leemos las variables de entorno de forma segura
-const contactInfo = {
-  email: import.meta.env.PUBLIC_EMAIL || "hola@norirstudio.com",
-  // Formateamos el número para el link de WhatsApp (quitando espacios/guiones si los hubiera, agregando prefijo +549)
-  phone: import.meta.env.PUBLIC_PHONE || "1141430021",
-  whatsappLink: `https://wa.me/549${import.meta.env.PUBLIC_PHONE}`,
-};
-
-const socialLinks = {
-  instagram: import.meta.env.PUBLIC_INSTAGRAM || "#",
-  tiktok: import.meta.env.PUBLIC_TIKTOK || "#",
-  facebook: import.meta.env.PUBLIC_FACEBOOK || "#",
-  behance: import.meta.env.PUBLIC_BEHANCE || "#",
-  github: import.meta.env.PUBLIC_GITHUB || "#",
-};
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/home/Hero.astro";
+import About from "../components/home/About.astro";
+import Services from "../components/home/Services.astro";
+import Projects from "../components/home/Projects.astro";
+import Testimonials from "../components/home/Testimonials.astro";
+import Contact from "../components/home/Contact.astro";
+import {contactInfo, socialLinks} from "@data/info"
 ---
 
 <Layout>
   <main class="relative z-10 bg-primary">
+    
     <Hero />
+    
     <About />
+    
     <Services />
+    
     <Projects />
-    <Testimonials />    
+    
+    <Testimonials />
+    
     <Contact 
       contact={contactInfo} 
       socials={socialLinks} 
     />
+    
   </main>
 </Layout>

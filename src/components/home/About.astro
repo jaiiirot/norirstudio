@@ -1,47 +1,47 @@
 ---
-// Archivo: src/components/home/About.astro
 ---
-<section class="flex bg-[url(/ruido.png)] bg-no-repeat bg-cover justify-center pb-24" id="nosotros">
+<section class="flex bg-[url(/ruido.png)] bg-no-repeat bg-cover justify-center pb-24 relative z-10" id="nosotros">
   <div class="border-t border-gray-600 w-11/12 mx-auto mt-24 text-tertiary">
     
-    <div class="flex justify-between py-4 mb-12">
-      <p class="text-quaternary uppercase tracking-widest text-sm">nosotros *</p>
+    <div class="flex justify-between py-4 mb-12 border-b border-gray-800">
+      <p class="text-quaternary uppercase tracking-widest text-sm">perfiles *</p>
       <p><span class="text-quaternary">02</span> // 05</p>
     </div>
 
-    <div class="flex flex-col lg:flex-row gap-16 items-center mt-8">
+    <article class="flex flex-col lg:flex-row gap-16 mt-16">
       
-      <div class="w-full lg:w-1/2">
-        <h2 
-          class="title text-[4rem] md:text-[6rem] lg:text-[8rem] leading-none text-quaternary mb-8" 
-          style="text-shadow: 1px 1px 40px rgba(255, 255, 255, 0.3);"
-        >
-          EL DÚO
-        </h2>
-        <p class="parrafe text-xl md:text-2xl leading-relaxed text-gray-300 mb-6">
-          NORIR STUDIO es el punto de colisión exacto donde la <span class="text-quaternary font-bold border-b border-gray-600">lógica de sistemas (UTN)</span> y la <span class="text-quaternary font-bold border-b border-gray-600">visualización arquitectónica (UBA)</span> convergen. 
+      <div class="w-full lg:w-1/3">
+        <h2 class="title text-[4rem] md:text-[6rem] leading-none text-quaternary mb-8 uppercase">EL NÚCLEO</h2>
+        <p class="parrafe text-lg leading-relaxed text-gray-400">
+          No somos una agencia tradicional. Somos dos perfiles en constante formación universitaria que aplican los paradigmas más actualizados del <span class="text-white">código</span> y el <span class="text-white">diseño espacial</span> a proyectos reales.
         </p>
-        <p class="parrafe text-base text-tertiary mb-12">
-          No hacemos solo diseño, construimos infraestructuras web robustas y materializamos conceptos espaciales hiperrealistas. Una sinergia entre código escalable y estética fotorrealista.
-        </p>
+      </div>
+
+      <div class="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8">
         
-        <a 
-          href="/nosotros" 
-          class="parrafe text-sm uppercase tracking-widest border border-quaternary text-quaternary px-8 py-4 hover:bg-quaternary hover:text-black transition-all duration-300 inline-block"
-        >
-          Conocer al estudio completo →
-        </a>
-      </div>
+        <div class="border border-gray-800 p-8 hover:bg-white hover:text-black transition-colors duration-500 group">
+          <p class="text-xs uppercase tracking-widest border-b border-gray-800 group-hover:border-gray-300 pb-2 mb-6 w-max">Lógica & Código</p>
+          <h3 class="title text-4xl text-quaternary group-hover:text-black mb-2 uppercase">Jairo</h3>
+          <p class="parrafe text-sm font-bold tracking-widest uppercase mb-6 text-tertiary group-hover:text-gray-800">
+            Ing. en Sistemas (2° Año UTN) <br> Junior Full-Stack Dev
+          </p>
+          <p class="parrafe text-base leading-relaxed text-gray-400 group-hover:text-gray-800">
+            Enfocado en fundamentos sólidos, bases de datos y desarrollo web eficiente. Traduzco requerimientos complejos en interfaces limpias e infraestructuras estables usando React, Astro y Node.js.
+          </p>
+        </div>
 
-      <div class="w-full lg:w-1/2 relative h-[400px] md:h-[500px] group overflow-hidden border border-gray-800">
-        <img 
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" 
-          alt="Arquitectura y Código" 
-          class="w-full h-full object-cover grayscale-100 group-hover:scale-105 transition-transform duration-700"
-        />
-        <div class="absolute inset-0 bg-black/50 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
-      </div>
+        <div class="border border-gray-800 p-8 hover:bg-white hover:text-black transition-colors duration-500 group">
+          <p class="text-xs uppercase tracking-widest border-b border-gray-800 group-hover:border-gray-300 pb-2 mb-6 w-max">Espacio & CGI</p>
+          <h3 class="title text-4xl text-quaternary group-hover:text-black mb-2 uppercase">Socio</h3> <p class="parrafe text-sm font-bold tracking-widest uppercase mb-6 text-tertiary group-hover:text-gray-800">
+            Arquitectura (4° Año UBA) <br> 3D & Visualizer
+          </p>
+          <p class="parrafe text-base leading-relaxed text-gray-400 group-hover:text-gray-800">
+            Dominio avanzado de representación arquitectónica. Transformo planimetrías en imágenes fotorrealistas de alto impacto mediante modelado 3D preciso, manejo de iluminación y postproducción gráfica.
+          </p>
+        </div>
 
-    </div>
+      </div>
+    </article>
+    
   </div>
 </section>

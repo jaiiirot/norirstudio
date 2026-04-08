@@ -40,14 +40,20 @@ const { contact, socials } = Astro.props;
       <p class="parrafe text-sm md:text-base text-gray-400 max-w-2xl mx-auto mb-12">
         La fusión perfecta entre la precisión de la Ingeniería de Sistemas (UTN) y la visión espacial de la Arquitectura (UBA). Si tu proyecto exige código robusto y un nivel visual fotorrealista, estás en el lugar correcto.
       </p>
-      
       <a 
-        href={`mailto:${contact.email}`} 
+        href={contact.whatsappLink}
         class="title text-[4rem] md:text-[8rem] lg:text-[10rem] leading-none text-quaternary hover:bg-quaternary hover:text-black transition-all duration-300 px-8 py-4 border border-transparent hover:border-quaternary"
         style="text-shadow: 1px 1px 40px rgba(255, 255, 255, 0.2);"
       >
         INICIAR PROYECTO
       </a>
+      <!-- <a 
+        href={`mailto:${contact.email}`} 
+        class="title text-[4rem] md:text-[8rem] lg:text-[10rem] leading-none text-quaternary hover:bg-quaternary hover:text-black transition-all duration-300 px-8 py-4 border border-transparent hover:border-quaternary"
+        style="text-shadow: 1px 1px 40px rgba(255, 255, 255, 0.2);"
+      >
+        INICIAR PROYECTO
+      </a> -->
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 border-t border-gray-800 pt-12 mt-auto text-left">
