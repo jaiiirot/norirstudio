@@ -1,0 +1,33 @@
+---
+// Archivo: src/pages/proyectos/index.astro
+import Layout from "../../layouts/Layout.astro";
+import ProjectCard from "../../components/projects/ProjectCard.astro";
+import { projectsData } from "../../data/projects";
+---
+
+<Layout>
+  <main class="bg-[url(/ruido.png)] bg-no-repeat bg-cover bg-fixed min-h-screen pt-32 pb-24">
+    
+    <div class="w-11/12 mx-auto">
+      <div class="mb-24">
+        <p class="text-quaternary uppercase tracking-widest text-sm mb-8">ARCHIVO *</p>
+        <h1 
+          class="title text-[4rem] md:text-[8rem] lg:text-[12rem] leading-none text-quaternary"
+          style="text-shadow: 1px 1px 40px rgba(255, 255, 255, 0.569);"
+        >
+          PROYECTOS
+        </h1>
+        <p class="parrafe text-xl text-tertiary mt-8 max-w-2xl">
+          Selección de trabajos donde la lógica del código y la estética del renderizado convergen.
+        </p>
+      </div>
+
+      <div class="flex flex-col border-b border-gray-800">
+        {projectsData.map((project) => (
+          <ProjectCard project={project} />
+        ))}
+      </div>
+      
+    </div>
+  </main>
+</Layout>

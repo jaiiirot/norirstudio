@@ -1,0 +1,97 @@
+---
+// Archivo: src/pages/nosotros/index.astro
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <main class="bg-[url(/ruido.png)] bg-no-repeat bg-cover bg-fixed min-h-screen pt-32 pb-24 text-quaternary">
+    
+    <div class="w-11/12 mx-auto">
+      
+      <div class="mb-24 mt-12">
+        <div class="flex justify-between py-4 border-t border-gray-600 mb-8">
+          <p class="text-quaternary uppercase tracking-widest text-sm">identidad *</p>
+          <p><span class="text-quaternary">01</span> // 02</p>
+        </div>
+        
+        <h1 
+          class="title text-[4rem] md:text-[8rem] lg:text-[12rem] leading-none"
+          style="text-shadow: 1px 1px 40px rgba(255, 255, 255, 0.569);"
+        >
+          EL ESTUDIO
+        </h1>
+        <p class="parrafe text-xl md:text-2xl text-tertiary mt-8 max-w-3xl leading-relaxed">
+          Nacemos de la colisión entre el pensamiento sistémico y el diseño espacial. <span class="text-quaternary">NORIR STUDIO</span> es el punto exacto donde la lógica algorítmica y la visualización arquitectónica convergen para crear proyectos digitales invulnerables y fotorrealistas.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-8 mb-32">
+        
+        <article class="group">
+          <div class="h-[400px] w-full overflow-hidden mb-8 border border-gray-800 relative">
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop" 
+              alt="Desarrollo Backend y Hardware" 
+              class="w-full h-full object-cover grayscale-100 group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+          <div class="border-l border-tertiary pl-6">
+            <h2 class="title text-[3rem] md:text-[4rem] leading-none mb-2">JAIRO</h2>
+            <p class="parrafe text-sm uppercase tracking-widest text-tertiary mb-6 border-b border-gray-800 pb-4 inline-block">
+              Ingeniería de Sistemas (UTN BA) // Full-Stack
+            </p>
+            <p class="parrafe text-base leading-relaxed text-gray-300 mb-4">
+              Arquitecto de software especializado en el desarrollo de plataformas escalables y ecosistemas web completos. De la gestión de bases de datos al renderizado en el navegador.
+            </p>
+            <p class="parrafe text-base leading-relaxed text-gray-300">
+              Con un dominio avanzado sobre múltiples paradigmas de programación y un profundo entendimiento de los procesos de negocio. Mi enfoque combina la eficiencia del código limpio con un alto conocimiento en hardware y rendimiento de componentes, asegurando que cada proyecto no solo funcione, sino que opere a su máxima capacidad.
+            </p>
+          </div>
+        </article>
+
+        <article class="group mt-0 md:mt-24">
+          <div class="h-[400px] w-full overflow-hidden mb-8 border border-gray-800 relative">
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop" 
+              alt="Arquitectura y Renderizado" 
+              class="w-full h-full object-cover grayscale-100 group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+          <div class="border-l border-tertiary pl-6">
+            <h2 class="title text-[3rem] md:text-[4rem] leading-none mb-2">VISUAL</h2>
+            <p class="parrafe text-sm uppercase tracking-widest text-tertiary mb-6 border-b border-gray-800 pb-4 inline-block">
+              Arquitectura (UBA) // CGI & 3D Artist
+            </p>
+            <p class="parrafe text-base leading-relaxed text-gray-300 mb-4">
+              Especialista en la traducción de conceptos espaciales abstractos a realidades tangibles mediante motores de renderizado avanzado y modelado 3D de alta precisión.
+            </p>
+            <p class="parrafe text-base leading-relaxed text-gray-300">
+              Experto en la suite de Adobe (Photoshop, Illustrator) para la postproducción fotográfica y la composición visual. Transformo líneas en CAD a recorridos inmersivos fotorrealistas de alto impacto comercial, prestando atención clínica a la luz, las texturas y la materialidad.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="border-t border-gray-600 py-16 flex flex-col md:flex-row justify-between items-center gap-12">
+        <div class="w-full md:w-1/2">
+          <p class="text-quaternary uppercase tracking-widest text-sm mb-4">MÉTODO *</p>
+          <h3 class="title text-[3rem] leading-none mb-6">SINERGIA TOTAL</h3>
+          <p class="parrafe text-lg text-tertiary">
+            Mientras uno asegura que la estructura interna sea a prueba de fallos y responda en milisegundos, el otro garantiza que la interfaz y el material visual sean impecables. La suma de nuestras disciplinas nos permite afrontar proyectos que exigen tanto destreza técnica como excelencia estética.
+          </p>
+        </div>
+        
+        <a 
+          href="/proyectos" 
+          class="parrafe text-xl uppercase tracking-widest border border-quaternary px-12 py-6 hover:bg-quaternary hover:text-black transition-all duration-300 w-full md:w-auto text-center"
+        >
+          VER TRABAJOS →
+        </a>
+      </div>
+
+    </div>
+  </main>
+</Layout>

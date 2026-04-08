@@ -1,0 +1,37 @@
+---
+// Archivo: src/components/projects/ProjectCard.astro
+import type { Project } from "../../data/projects";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<a 
+  href={`/proyectos/${project.slug}`} 
+  class="group flex flex-col md:flex-row border-t border-gray-800 hover:bg-white hover:text-black transition-all duration-300 text-quaternary h-[300px] md:h-[250px]"
+>
+  <div class="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between z-10 relative">
+    <div class="flex justify-between items-start">
+      <span class="parrafe text-sm uppercase tracking-widest">{project.id}</span>
+      <span class="parrafe text-xs uppercase tracking-widest border border-current px-2 py-1">{project.category}</span>
+    </div>
+    
+    <div>
+      <h3 class="title text-[2.5rem] md:text-[3.5rem] leading-none mb-2">{project.title}</h3>
+      <p class="parrafe text-sm md:text-base text-tertiary group-hover:text-gray-800 transition-colors uppercase tracking-widest">
+        {project.service} // {project.year}
+      </p>
+    </div>
+  </div>
+
+  <div class="w-full md:w-1/2 h-full overflow-hidden border-l border-transparent group-hover:border-black">
+    <img 
+      src={project.image} 
+      alt={project.title} 
+      class="w-full h-full object-cover grayscale-100 group-hover:scale-105 transition-transform duration-700 opacity-60 group-hover:opacity-100"
+    />
+  </div>
+</a>

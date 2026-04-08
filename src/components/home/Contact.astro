@@ -1,0 +1,84 @@
+---
+// Archivo: src/components/home/Contact.astro
+
+// Definimos la interfaz de los datos que este componente va a recibir desde index.astro
+interface Props {
+  contact: {
+    email: string;
+    phone: string;
+    whatsappLink: string;
+  };
+  socials: {
+    instagram: string;
+    tiktok: string;
+    facebook: string;
+    behance: string;
+    github: string;
+  };
+}
+
+// Extraemos las variables
+const { contact, socials } = Astro.props;
+---
+
+<section class="flex bg-[url(/ruido.png)] bg-no-repeat bg-cover justify-center pb-24 min-h-screen items-center relative overflow-hidden">
+  
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white opacity-[0.02] blur-3xl rounded-full pointer-events-none"></div>
+
+  <div class="border-t border-gray-600 w-11/12 mx-auto text-tertiary flex flex-col justify-between h-full py-8 relative z-10">
+    
+    <div class="flex justify-between py-4 mb-16">
+      <p class="text-quaternary uppercase tracking-widest text-sm">contacto *</p>
+      <p><span class="text-quaternary">05</span> // 05</p>
+    </div>
+
+    <div class="flex flex-col items-center justify-center text-center flex-grow mb-16 mt-8">
+      <p class="parrafe text-xl md:text-2xl text-tertiary mb-6 uppercase tracking-[0.3em]">
+        No hacemos páginas, construimos infraestructuras. <br/> No hacemos dibujos, proyectamos realidades.
+      </p>
+      
+      <p class="parrafe text-sm md:text-base text-gray-400 max-w-2xl mx-auto mb-12">
+        La fusión perfecta entre la precisión de la Ingeniería de Sistemas (UTN) y la visión espacial de la Arquitectura (UBA). Si tu proyecto exige código robusto y un nivel visual fotorrealista, estás en el lugar correcto.
+      </p>
+      
+      <a 
+        href={`mailto:${contact.email}`} 
+        class="title text-[4rem] md:text-[8rem] lg:text-[10rem] leading-none text-quaternary hover:bg-quaternary hover:text-black transition-all duration-300 px-8 py-4 border border-transparent hover:border-quaternary"
+        style="text-shadow: 1px 1px 40px rgba(255, 255, 255, 0.2);"
+      >
+        INICIAR PROYECTO
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 border-t border-gray-800 pt-12 mt-auto text-left">
+      
+      <div class="flex flex-col gap-2">
+        <p class="text-quaternary font-bold mb-2 tracking-widest uppercase text-sm">Comunícate</p>
+        <a href={`mailto:${contact.email}`} class="parrafe text-tertiary hover:text-quaternary transition-colors text-lg">
+          {contact.email}
+        </a>
+        <a href={contact.whatsappLink} target="_blank" rel="noopener noreferrer" class="parrafe text-tertiary hover:text-quaternary transition-colors text-lg">
+          +54 9 {contact.phone}
+        </a>
+      </div>
+
+      <div class="flex flex-col gap-2 md:text-center">
+        <p class="text-quaternary font-bold mb-2 tracking-widest uppercase text-sm">Base de Operaciones</p>
+        <p class="parrafe text-tertiary text-lg">Buenos Aires, Argentina</p>
+        <p class="parrafe text-tertiary text-sm uppercase tracking-widest mt-1">Sinergia UTN // UBA</p>
+      </div>
+
+      <div class="flex flex-col md:items-end gap-2 text-right">
+        <p class="text-quaternary font-bold mb-2 tracking-widest uppercase text-sm w-full">Ecosistema Digital</p>
+        <div class="flex flex-wrap md:justify-end gap-x-6 gap-y-2 w-full">
+          <a href={socials.instagram} target="_blank" class="text-tertiary hover:text-quaternary transition-all uppercase text-sm tracking-widest hover:underline underline-offset-4">Instagram</a>
+          <a href={socials.tiktok} target="_blank" class="text-tertiary hover:text-quaternary transition-all uppercase text-sm tracking-widest hover:underline underline-offset-4">TikTok</a>
+          <a href={socials.facebook} target="_blank" class="text-tertiary hover:text-quaternary transition-all uppercase text-sm tracking-widest hover:underline underline-offset-4">Facebook</a>
+          <a href={socials.behance} target="_blank" class="text-tertiary hover:text-quaternary transition-all uppercase text-sm tracking-widest hover:underline underline-offset-4">Behance</a>
+          <a href={socials.github} target="_blank" class="text-tertiary hover:text-quaternary transition-all uppercase text-sm tracking-widest hover:underline underline-offset-4">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
